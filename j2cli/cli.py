@@ -8,6 +8,8 @@ from . import __version__
 from .context import read_context_data, FORMATS
 from .extras import filters
 
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 class FilePathLoader(jinja2.BaseLoader):
     """ Custom Jinja2 template loader which just loads a single template file """
